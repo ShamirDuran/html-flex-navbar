@@ -1,0 +1,146 @@
+:root {
+  --margin: 20px;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* navbar */
+
+header {
+  display: flex;
+  align-items: center;
+  background-color: rgb(75, 72, 72);
+  padding: 10px var(--margin);
+}
+
+.logo {
+  font-size: 36px;
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  margin-left: 16px;
+  display: block;
+}
+
+.spacer {
+  flex: 1;
+}
+
+/* main */
+
+main {
+  width: 100vw;
+  display: flex;
+  flex: 1 auto;
+}
+
+main .content {
+  width: 100%;
+  padding: 30px var(--margin);
+  background-color: yellow;
+  flex-grow: 1;
+  order: 1;
+}
+
+main aside {
+  background-color: purple;
+  padding: 20px;
+  flex-basis: 200px;
+  order: 2;
+}
+
+main aside ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+}
+
+main aside ul li {
+  list-style: none;
+}
+
+main aside ul li a {
+  color: white;
+  text-decoration: none;
+  margin: 20px 0;
+}
+
+/* footer */
+
+footer {
+  background-color: pink;
+  padding: 30px var(--margin);
+  text-align: center;
+}
+
+/* toggle */
+
+.toggle-menu {
+  color: white;
+  font-size: 26px;
+  display: none;
+}
+
+/* querys */
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  main .content {
+    order: 2;
+  }
+
+  main aside {
+    order: 1;
+    flex-basis: 80px;
+  }
+
+  main aside ul {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  main aside ul li a {
+    margin-right: 15px;
+  }
+
+  .toggle-menu {
+    display: block;
+  }
+
+  header nav ul {
+    display: none;
+  }
+}
