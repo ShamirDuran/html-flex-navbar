@@ -27,8 +27,10 @@ header {
   float: left;
   font-size: 36px;
   line-height: 60px;
+  font-weight: 700;
   height: 60px;
   text-align: center;
+  text-transform: uppercase;
 }
 
 header a {
@@ -112,14 +114,6 @@ footer {
 /* toggle */
 
 .toggle-menu {
-  color: white;
-  float: right;
-  height: 40px;
-  width: 40px;
-  margin: 16px 0px;
-  cursor: pointer;
-  text-align: center;
-  font-size: 30px;
   display: none;
 }
 
@@ -150,9 +144,32 @@ footer {
 
   .toggle-menu {
     display: block;
+    width: 40px;
+    height: 40px;
+    padding: 10px 0 0 0;
+    float: right;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    font-size: 30px;
   }
 
-  header nav ul {
+  .logo {
+    font-size: 30px;
+  }
+
+  nav {
     display: none;
+  }
+
+  nav.active,
+  nav.active ul {
+    display: block;
+    width: 100%;
+  }
+
+  nav.active ul li a {
+    margin: 10px 2px;
+    padding: 0;
   }
 }

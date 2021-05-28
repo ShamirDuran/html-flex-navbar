@@ -17,6 +17,7 @@
 <body>
     <header>
         <a href="#" class="logo">Logo</a>
+        <div id="toggle-button" class="toggle-menu"><i class="fas fa-bars"></i></div>
         <div class="spacer"></div>
         <nav>
             <ul>
@@ -27,7 +28,6 @@
             </ul>
         </nav>
         <div class="clearfix"></div>
-        <div class="toggle-menu"><i class="fas fa-bars"></i></div>
     </header>
 
     <main>
@@ -57,7 +57,19 @@
 
 
     <script>
+        const btn = document.querySelector("#toggle-button");
+        const nav = document.getElementsByTagName("nav")[0];
 
+        document.addEventListener("DOMContentLoaded", () => {
+            toggleButton();
+        });
+
+        function toggleButton() {
+            btn.addEventListener("click", () => {
+                btn.classList.toggle("active");
+                nav.classList.toggle("active");
+            })
+        }
     </script>
 </body>
 
